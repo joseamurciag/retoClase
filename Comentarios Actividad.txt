@@ -1,0 +1,17 @@
+Buenas Noches profesor Alberio,
+
+Subimos la actividad propuesta para las notas 1 y 2 del primer corte que se debia realizar en clase.
+
+Se realizo la modificación para la seguridad en el método GeuUser by Id, para que solo se ejecute la consulta con el JWT que genera tras el logueo.
+si no se agrega el token correctamente genera error y no da acceso a la información.
+
+se creo un archivo de seguridad con la key. archivo auth.js.
+y se modifico también en la ruta para que el método siempre verifique.
+
+
+ app.get('/api/users/:id', verifyToken, userController.getUserById);
+
+Nuestros datos son:
+
+Jose Armando Murcia Gonzalez - id 1032782 
+Arnulfo Monroy Ortiz - ID 654265
